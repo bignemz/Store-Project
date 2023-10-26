@@ -14,7 +14,11 @@ function Search() {
   useEffect(() => {
     const Rapid = async () => {
       try {
-        const response = await fetch(url);
+        const response = await fetch(
+          `https://fakestoreapi.com/products/${
+            category ? "category/" + category : ""
+          }`
+        );
         const result = await response.json();
         setCart(result);
       } catch (error) {
@@ -22,7 +26,7 @@ function Search() {
       }
     };
     Rapid();
-  }, [category, url]);
+  }, [category]);
 
   function all(e) {
     setCategory("");
@@ -66,10 +70,6 @@ function Search() {
       // return Finalpoint.length > 0 ? product.title.includes(Finalpoint) : true;
     });
   }, [Endpoint, Cart]);
-
-  const url = `https://fakestoreapi.com/products/${
-    category ? "category/" + category : ""
-  }`;
 
   const CartElement = filtered.map((cart) => (
     <Product
