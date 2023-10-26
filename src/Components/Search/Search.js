@@ -22,7 +22,7 @@ function Search() {
       }
     };
     Rapid();
-  }, [category]);
+  }, [category, url]);
 
   function all(e) {
     setCategory("");
