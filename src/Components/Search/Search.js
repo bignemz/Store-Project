@@ -11,22 +11,18 @@ function Search() {
 
   const [Endpoint, setEndpoint] = useState("");
 
-  const Api = () => {
-    useEffect(() => {
-      const Rapid = async () => {
-        try {
-          const response = await fetch(url);
-          const result = await response.json();
-          setCart(result);
-        } catch (error) {
-          console.error(error);
-        }
-      };
-      Rapid();
-    }, [category]);
-  };
-
-  Api();
+  useEffect(() => {
+    const Rapid = async () => {
+      try {
+        const response = await fetch(url);
+        const result = await response.json();
+        setCart(result);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    Rapid();
+  }, [category]);
 
   function all(e) {
     setCategory("");
@@ -35,22 +31,17 @@ function Search() {
 
   function electronics() {
     setCategory("electronics");
-    // return Api;
   }
 
   function men() {
     setCategory("men's clothing");
-
-    // return Api;
   }
 
   function women() {
     setCategory("women's clothing");
-    // return Api;
   }
   function jewelery() {
     setCategory("jewelery");
-    // return Api;
   }
 
   const handleChange = (e) => {
@@ -61,7 +52,7 @@ function Search() {
   const filtered = useMemo(() => {
     return Cart.filter((product) => {
       if (Endpoint.length === 0) {
-        return Api;
+        return Cart;
       } else if (Endpoint.length > 0) {
         return product.title.toLowerCase().includes(Endpoint.toLowerCase());
       }
