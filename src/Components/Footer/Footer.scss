@@ -5,6 +5,10 @@
   font-family: Montserrat;
   src: url(../../Montserrat-Regular.ttf);
 }
+@font-face {
+  font-family: Wimpykid;
+  src: url(../../DiaryOfAWimpyKidFontRegular.ttf);
+}
 
 .footer {
   padding: 40px;
@@ -23,6 +27,7 @@
     width: 300px;
     h1 {
       color: $blue-color;
+      font-family: Wimpykid;
     }
 
     p {

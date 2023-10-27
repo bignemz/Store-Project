@@ -9,21 +9,22 @@ function Supportpage() {
   };
   const faqs = [
     {
-      question: "Can I work on a project I started before the hackathon?",
-      answer: "Can I work on a project I started before the hackathon?",
+      question: "How can i order from you?",
+      answer: "Just add to cart",
     },
     {
-      question: "Can I work on a project I started before the hackathon?",
-      answer: "Can I work on a project I started before the hackathon?",
+      question: "How long does it take to get my order?",
+      answer: "Maxmimum of 2-3 days",
     },
 
     {
-      question: "Can I work on a project I started before the hackathon?",
-      answer: "Can I work on a project I started before the hackathon?",
+      question: "Do you only sell mens stuff ?",
+      answer: "No we have variety of stuff you can buy",
     },
     {
-      question: "Can I work on a project I started before the hackathon?",
-      answer: "Can I work on a project I started before the hackathon?",
+      question: "Can i be able sell on your platform ? ",
+      answer:
+        "sadly, not at the moment but it's something we want to introduce",
     },
   ];
 
@@ -53,7 +54,7 @@ function Supportpage() {
                   </p>
                 )}
               </div>
-              <span>
+              <span className="Support-button">
                 <button
                   onClick={() => handleItemClick(index)}
                   className="faq-button"
